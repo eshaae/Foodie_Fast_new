@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Taste of Nepal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">Taste of Nepal</a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="menu.html" class="nav-link active">Menu</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li class="nav-item"><a href="addtocart.html" class="nav-link">Add to Cart</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="animate-on-load">Our Menu</h1>
+                <p class="typing-animation">Discover the authentic flavors of Nepal through our carefully crafted dishes</p>
+            </div>
+        </section>
+
+        <section class="menu-section section">
+            <div class="container">
+                <div class="menu-tabs">
+                    <div class="tabs-nav">
+                        <button class="tab-btn active" data-tab="appetizers">Appetizers</button>
+                        <button class="tab-btn" data-tab="main-courses">Main Courses</button>
+                        <button class="tab-btn" data-tab="breads">Breads & Rice</button>
+                        <button class="tab-btn" data-tab="desserts">Desserts</button>
+                        <button class="tab-btn" data-tab="beverages">Beverages</button>
+                        
+
+                    </div>
+
+                    <div class="tab-content active" id="appetizers">
+                        <div class="menu-grid">
+                            <div class="menu-item" data-aos="fade-up">
+                                <div class="menu-item-image">
+                                    <img src="images/vegetable-momo.jpg" alt="Vegetable Momo">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Vegetable Momo <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$8.99</span>
+                                         <button onclick="addToCart('Vegetable Momo', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Steamed dumplings filled with seasoned vegetables</p>
+                                </div>
+                            </div>
+                           <div class="menu-item" onclick="handleItemClick('Chicken Momo', 6.99)" data-aos="fade-up" data-aos-delay="100">
+                                <div class="menu-item-image">
+                                    <img src="images/chicken-momo.jpg" alt="Chicken Momo">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Chicken Momo</h3>
+                                        <span class="price">$9.99</span>
+                                        <button onclick="addToCart('Chicken Momo', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Steamed dumplings filled with spiced chicken</p>
+                                </div>
+                            </div>
+                            <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="menu-item-image">
+                                    <img src="images/samosa.jpg" alt="Samosa">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Samosa <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$6.99</span>
+                                        <button onclick="addToCart('Samosa', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Crispy pastry filled with spiced potatoes and peas</p>
+                                </div>
+                            </div>
+                            <div class="menu-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="menu-item-image">
+                                    <img src="images/sekuwa.jpg" alt="Sekuwa">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Sekuwa</h3>
+                                        <span class="price">$12.99</span>
+                                         <button onclick="addToCart('Sekuwa', 6)">Add to Cart</button>
+
+                                    </div>
+                                    <p>Grilled marinated meat skewers with Nepali spices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="main-courses">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/bhat.jpeg" alt="Dal Bhat Tarkari">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Dal Bhat Tarkari <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$16.99</span>
+                                         <button onclick="addToCart('Dal Bhat Tarkari', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Traditional Nepali meal with rice, lentil soup, vegetable curry, and pickles</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/thali.jpeg" alt="Chicken Thali">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Chicken Thali</h3>
+                                        <span class="price">$18.99</span>
+                                         <button onclick="addToCart('Chicken Thali', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Complete meal with rice, lentils, chicken curry, vegetables, and yogurt</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/thukpa.jpg" alt="Vegetable Thukpa">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Vegetable Thukpa <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$14.99</span>
+                                         <button onclick="addToCart('Vegetable Thukpa', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Hearty noodle soup with mixed vegetables and Himalayan herbs</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/curry.jpeg" alt="Lamb Curry">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Lamb Curry</h3>
+                                        <span class="price">$19.99</span>
+                                         <button onclick="addToCart('Lamby Curry', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Slow-cooked lamb in rich gravy with traditional Nepali spices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="breads">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/roti.jpeg" alt="Roti">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Roti <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$3.99</span>
+                                         <button onclick="addToCart('Roti', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Traditional whole wheat flatbread</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/naaan.jpeg" alt="Naan">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Naan <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$4.99</span>
+                                         <button onclick="addToCart('Naan', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Leavened flatbread baked in tandoor oven</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/jeera rice.jpeg" alt="Jeera Rice">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Jeera Rice <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$5.99</span>
+                                         <button onclick="addToCart('Jeera Rice', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Basmati rice flavored with cumin seeds</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/pulaoo.jpeg" alt="Pulao">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Pulao <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$7.99</span>
+                                         <button onclick="addToCart('Pulao', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Fragrant rice cooked with vegetables and spices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="desserts">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/kheerrr.jpeg" alt="Kheer">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Kheer <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$6.99</span>
+                                         <button onclick="addToCart('Kheer', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Traditional rice pudding with cardamom and nuts</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/ceelroti.jpeg" alt="Sel Roti">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Sel Roti <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$5.99</span>
+                                         <button onclick="addToCart('Sel Roti', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Sweet ring-shaped rice bread, a Nepali delicacy</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/jerifood.jpeg" alt="Jeri">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Jeri <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$7.99</span>
+                                         <button onclick="addToCart('Jeri', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Sweet spiral-shaped dessert made from flour, sugar, and ghee</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/lamohannn.jpeg" alt="Lalmohan">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Lalmohan <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$6.99</span>
+                                         <button onclick="addToCart('Lalmohan', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Sweet fried dough balls soaked in sugar syrup</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="beverages">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/masalachaie.jpeg" alt="Masala Chai">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Masala Chai <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$3.99</span>
+                                         <button onclick="addToCart('Masala Chai', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Spiced tea with milk</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/lassssi.jpeg" alt="Lassi">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Lassi <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$4.99</span>
+                                         <button onclick="addToCart('Lassi', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Traditional yogurt-based drink, sweet or salty</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/chiyaa.jpeg" alt="Chiya">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Chiya <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$3.99</span>
+                                         <button onclick="addToCart('Chiya', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Traditional Nepali tea with milk and spices</p>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="images/mango.jpeg" alt="Mango Juice">
+                                </div>
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h3>Mango Juice <span class="vegetarian-badge" title="Vegetarian"></span></h3>
+                                        <span class="price">$4.99</span>
+                                         <button onclick="addToCart('Mango Juice', 6)">Add to Cart</button>
+                                    </div>
+                                    <p>Fresh mango juice</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-note fade-in">
+                    <p>All our dishes are prepared fresh with authentic Nepali spices and ingredients. Please inform our staff of any allergies or dietary restrictions.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Taste of Nepal</h3>
+                    <p>Experience the authentic flavors of Nepal in our traditional restaurant. We bring the taste of the Himalayas to your plate.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Himalayan Street<br>Kathmandu Valley, 44600</p>
+                        <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                        <p><i class="fas fa-envelope"></i> info@tasteofnepal.com</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Taste of Nepal. All rights reserved.</p>
+                <div class="footer-flag">
+                    <img src="images/nepal-flag.png" alt="Nepal Flag" width="30" height="30">
+                    <span>Made with ❤️ in Nepal</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot">
+        <button class="chatbot-toggle">
+            <i class="fas fa-comments"></i>
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="chatbot-container">
+            <div class="chatbot-header">
+                <h3>Taste of Nepal Chat Support</h3>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot">
+                    <p>Namaste! How can I help you today? You can ask about our menu, location, or make a reservation.</p>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <form id="chatbot-form">
+                    <input type="text" placeholder="Type your message..." id="chatbot-message-input">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music Toggle -->
+    <div class="music-toggle">
+        <button id="music-button">
+            <i class="fas fa-music"></i>
+        </button>
+    </div>
+    <audio id="background-music" loop>
+        <source src="audio/nepali-music.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
