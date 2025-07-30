@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taste of Nepal - Authentic Nepali Cuisine</title>
+    <title>Foodie_Fast - Authentic Nepali Cuisine</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="index.html">Taste of Nepal</a>
+                    <a href="index.html">Foodie_Fast</a>
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
@@ -26,6 +26,9 @@
                         <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                         <li class="nav-item"><a href="addtocart.html" class="nav-link">Add to Cart</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" onclick="openLoginModal(); return false;">Sign In</a></li>
+
+
                     </ul>
                 </nav>
                 <div class="header-buttons">
@@ -45,7 +48,7 @@
         <section class="hero">
             <div class="hero-image"></div>
             <div class="hero-content">
-                <h1 class="animate-on-load">Taste of Nepal</h1>
+                <h1 class="animate-on-load">Foodie_Fast</h1>
                 <p class="typing-animation">Experience authentic Nepali cuisine in the heart of the city</p>
                 <a href="menu.html" class="btn btn-primary animate-on-load">View Our Menu</a>
             </div>
@@ -104,7 +107,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
-                    <h3>Taste of Nepal</h3>
+                    <h3>Foodie_Fast</h3>
                     <p>Experience the authentic flavors of Nepal in our traditional restaurant. We bring the taste of the Himalayas to your plate.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -132,7 +135,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> Taste of Nepal. All rights reserved.</p>
+                <p>&copy; <span id="current-year"></span> Foodie_Fast. All rights reserved.</p>
                 <div class="footer-flag">
                     <img src="images/nepal-flag.png" alt="Nepal Flag" width="30" height="30">
                     <span>Made with ❤️ in Nepal</span>
@@ -174,8 +177,20 @@
     <audio id="background-music" loop>
         <source src="audio/nepali-music.mp3" type="audio/mp3">
     </audio>
+<!-- added by me Login page-->
+    <div id="loginModal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeLoginModal()">×</button>
+    <h3>Select Login Role</h3>
+    <button onclick="location.href='login_user.html'">User</button>
+    <button onclick="location.href='login_delivery.html'">Delivery Boy</button>
+    <button onclick="location.href='login_admin.html'">Admin</button>
+  </div>
+</div>
+
 
     <!-- Scripts -->
+    
     <script src="js/script.js"></script>
 </body>
 </html>

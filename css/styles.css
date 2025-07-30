@@ -1397,4 +1397,77 @@ body, p, .card, .card *, h1, h2, h3, h4, h5, h6, a, .nav-link, .footer, .footer 
     font-weight: bold;
 }
 
+/* Modal Background */
+#loginModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#loginModal.active {
+  display: flex;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  position: relative;
+
+  display: flex;
+  flex-direction: column; /* ensure vertical stacking */
+  align-items: stretch;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: #e63946;
+}
+
+/* Login Role Buttons */
+.modal-content button:not(.close-btn) {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border: none;
+  background-color: #e63946;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:not(.close-btn):hover {
+  background-color: #d62828;
+}
+
+/* Prevent background scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
 

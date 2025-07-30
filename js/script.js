@@ -247,6 +247,12 @@ function addToCart(name, price) {
 
         function renderCart() {
             const tbody = document.getElementById('cart-body');
+            const totalElement = document.getElementById('total');
+
+            if (!tbody || !totalElement) {
+              console.warn("Cart elements not found. Skipping cart render.");
+              return;
+            }
             let total = 0;
             tbody.innerHTML = '';
 
@@ -308,4 +314,22 @@ function proceedToPayment() {
     window.location.href = "payment.html"; // Optional redirect
 }
 
+// login page
+function openLoginModal() {
+  document.getElementById("loginModal").classList.add("active");
+  document.body.classList.add("modal-open");
+}
+
+function closeLoginModal() {
+  document.getElementById("loginModal").classList.remove("active");
+  document.body.classList.remove("modal-open");
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById('loginModal');
+  if (event.target === modal) {
+    closeLoginModal();
+  }
+}
 
